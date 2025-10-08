@@ -1,5 +1,4 @@
-
- import streamlit as st
+import streamlit as st
 import pandas as pd
 from google import genai
 from google.genai.errors import APIError
@@ -254,4 +253,3 @@ if prompt := st.chat_input("Hỏi Gemini AI về phân tích tài chính..."):
                     error_message = f"Đã xảy ra lỗi không xác định: {e}"
                     st.error(error_message)
                     st.session_state.chat_messages.append({"role": "assistant", "content": error_message})
-
